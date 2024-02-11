@@ -6,9 +6,12 @@
 <title>Wniosek Walentynkowy</title>
 <link rel="stylesheet" href="accept-form.css">
 </head>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 <body>
   <h1>Wniosek Walentynkowy</h1>
-  <form>
+  <form id="valentine-form">
     <label for="name">Twoje Imię:</label><br>
     <input type="text" id="name" name="name" required><br>
     <label for="favorite-dish">Twoje wymarzone danie na Walentynki:</label><br>
@@ -26,21 +29,22 @@
 
     <label for="why">Dlaczego akurat Ciebie powinienem wybrać na swoją walentynkę?:</label><br>
     <textarea id="why" name="why" rows="4"></textarea><br>
-    
+
     <input type="checkbox" id="agree" name="agree" required>
     <label for="agree">Oświadczam, że akceptuję warunki umowy Walentynkowej:</label><br>
     <div id="overlay" style="display: none;"></div>
     <div id="dialog" style="display: none;">
       <h2>Warunki umowy Walentynkowej:</h2>
       <textarea id="conditions" readonly></textarea>
-      <button onclick="closeDialog()">Zamknij</button>
+      <button type="button" onclick="closeDialog()">Zamknij</button>
     </div>
     
-    <button onclick="openDialog()">Pokaż warunki umowy</button>
-    <div style="margin-top: 20px;"><input type="submit" value="Wyślij wniosek"></div>
+    <button type="button" onclick="openDialog()">Pokaż warunki umowy</button>
+    <div style="margin-top: 20px;"><input type="submit" value="Wyślij wniosek" id="submit-button"></div>
   </form>
 
-  <!-- Skrypt JavaScript do obsługi wyświetlania okna dialogowego z warunkami umowy -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>  
   <script src="form-conditions.js"></script>
+  <script src="form-send.js"></script>
 </body>
 </html>

@@ -86,6 +86,6 @@ noButton.addEventListener('click', function() {
 })
 
 yesButton.addEventListener('click', function() {
-  window.open('./accept-form.html')
+  window.location.href='./accept-form.html';
 });
 
