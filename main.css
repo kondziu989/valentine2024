@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
+html {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
   background-color: #f7e1eb; /* Light pink background */
   font-family: 'Dancing Script', cursive; /* Romantic font */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="20" y="60" font-family="Arial" font-size="60" fill="red">❤</text></svg>'), 
@@ -37,7 +42,7 @@ body {
 
 .showButton {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   cursor: pointer;
   color: #ff4d6b; /* Pink color */
   text-decoration: underline;
