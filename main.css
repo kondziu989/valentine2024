@@ -20,11 +20,12 @@ body {
 
 .container {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: --webkit-fill-available;
 }
 
 .button {
@@ -42,7 +43,7 @@ body {
 
 .showButton {
   position: fixed;
-  bottom: 60px;
+  bottom: 40px;
   cursor: pointer;
   color: #ff4d6b; /* Pink color */
   text-decoration: underline;
