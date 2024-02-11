@@ -37,7 +37,7 @@ body {
 }
 
 .showButton {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   cursor: pointer;
   color: #ff4d6b; /* Pink color */
