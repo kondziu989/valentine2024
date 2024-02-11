@@ -74,11 +74,21 @@ noButton.addEventListener('click', function() {
     window.alert('Ponownie kliknij przycisk "Nie" w celu potwierdzenia.');
   }
 
-  if (noClicks > 0) {
+  if (noClicks === 1) {
     if (window.confirm('Czy jesteś pewna że chcesz zrezygnować?')){
-      if (window.confirm('Na bank?')){
-        
+      if (window.confirm('Ale na pewno?')){
+        window.alert('Dla pewności kliknij jeszcze raz "Nie"');
       } 
+    }
+  }
+
+  if (noClicks > 1) {
+    if (window.confirm('Za chwilę odrzucisz swoją jedyną szansę na wspaniałe życie')) {
+      if (window.confirm('Jesteś pewna?')){
+        if (window.confirm('To Twoja ostatnia szansa')) {
+          window.location.href='./rejected.html';
+        }
+      }
     }
   }
 
