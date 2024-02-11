@@ -13,9 +13,10 @@ body {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="20" y="60" font-family="Arial" font-size="60" fill="red">❤</text></svg>'), 
                     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><text x="10" y="30" font-family="Arial" font-size="30" fill="red">❤</text></svg>'),
                     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 100 100"><text x="20" y="60" font-family="Arial" font-size="60" fill="red" transform="rotate(-45 50 50)">❤</text></svg>'),
+                    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50"><text x="10" y="30" font-family="Arial" font-size="30" fill="red" transform="rotate(30 25 25)">❤</text></svg>'),
                     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50"><text x="10" y="30" font-family="Arial" font-size="30" fill="red" transform="rotate(30 25 25)">❤</text></svg>');
   background-repeat: no-repeat;
-  background-position: 30% 40%, 70% 70%, 10% 20%, 90% 10%; /* Adjust positions as desired */
+  background-position: 30% 40%, 70% 70%, 10% 20%, 90% 10%, 30% 80%;/* Adjust positions as desired */
 }
 
 .container {
@@ -55,12 +56,13 @@ body {
 }
 
 #noButton {
+  padding: 5px 8px;
+  font-size: 12px;
   display: none; /* Hide the button initially */
   position: absolute; /* Position the button absolutely */
   top: 50%; /* Position the button vertically at the center */
   left: 50%; /* Position the button horizontally at the center */
   transform: translate(-50%, -50%); /* Center the button */
-  padding: 10px 20px;
   background-color: grey; /* Pink button */
   color: white;
   border: none;

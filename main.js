@@ -1,5 +1,8 @@
 const movingButton = document.getElementById('noButton');
 const showNoButton = document.getElementById('showNoButton');
+const noButton = document.getElementById('noButton');
+
+let noClicks = 0;
 
 const containerWidth = window.innerWidth;
 const containerHeight = window.innerHeight;
@@ -62,5 +65,19 @@ function moveButton() {
 showNoButton.addEventListener('click', function() {
   movingButton.style.display = 'block';
   showNoButton.style.display = 'none';
-  moveButton(); // Start button movement after showing it
+  // moveButton(); // Start button movement after showing it
 });
+
+noButton.addEventListener('click', function() {
+  if (noClicks === 0) {
+    window.alert('Ponownie kliknij przycisk "Nie" w celu potwierdzenia.');
+  }
+
+  if (noClicks > 0) {
+    if (window.confirm('Czy jesteś pewna że chcesz zrezygnować?')){
+      window.open('./accept-form.html')
+    }
+  }
+
+  noClicks++;
+})

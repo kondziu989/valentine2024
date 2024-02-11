@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wniosek Walentynkowy</title>
+<link rel="stylesheet" href="accept-form.css">
+</head>
+<body>
+  <h1>Wniosek Walentynkowy</h1>
+  <form>
+    <label for="name">Twoje Imię:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="favorite-dish">Twoje wymarzone danie na Walentynki:</label><br>
+    <select id="favorite-dish" name="favorite-dish" required>
+      <option value="">Wybierz preferowane danie </option>
+      <option value="Pizza">Pizzunia</option>
+      <option value="Makaron">Makaronik</option>
+      <option value="Burgery">Burgerki</option>
+      <option value="Kuchnia polska">Kuchnia polska</option>
+      <option value="Kuchnia azjatycka">Kuchnia azjatycka</option>
+    </select><br>
+    
+    <label for="gift-preference">Dodatkowy komentarz (np. preferowana aktywność):</label><br>
+    <textarea id="gift-preference" name="comment" rows="4"></textarea><br>
+
+    <label for="why">Dlaczego akurat Ciebie powinienem wybrać na swoją walentynkę?:</label><br>
+    <textarea id="why" name="why" rows="4"></textarea><br>
+    
+    <input type="checkbox" id="agree" name="agree" required>
+    <label for="agree">Oświadczam, że akceptuję warunki umowy Walentynkowej:</label><br>
+    <div id="overlay" style="display: none;"></div>
+    <div id="dialog" style="display: none;">
+      <h2>Warunki umowy Walentynkowej:</h2>
+      <textarea id="conditions" readonly></textarea>
+      <button onclick="closeDialog()">Zamknij</button>
+    </div>
+    
+    <button onclick="openDialog()">Pokaż warunki umowy</button>
+    <div style="margin-top: 20px;"><input type="submit" value="Wyślij wniosek"></div>
+  </form>
+
+  <!-- Skrypt JavaScript do obsługi wyświetlania okna dialogowego z warunkami umowy -->
+  <script src="form-conditions.js"></script>
+</body>
+</html>
