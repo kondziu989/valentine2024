@@ -1,6 +1,7 @@
 const movingButton = document.getElementById('noButton');
 const showNoButton = document.getElementById('showNoButton');
 const noButton = document.getElementById('noButton');
+const yesButton = document.getElementById('yesButton');
 
 let noClicks = 0;
 
@@ -65,7 +66,7 @@ function moveButton() {
 showNoButton.addEventListener('click', function() {
   movingButton.style.display = 'block';
   showNoButton.style.display = 'none';
-  // moveButton(); // Start button movement after showing it
+  moveButton(); // Start button movement after showing it
 });
 
 noButton.addEventListener('click', function() {
@@ -75,9 +76,16 @@ noButton.addEventListener('click', function() {
 
   if (noClicks > 0) {
     if (window.confirm('Czy jesteś pewna że chcesz zrezygnować?')){
-      window.open('./accept-form.html')
+      if (window.confirm('Na bank?')){
+        
+      } 
     }
   }
 
   noClicks++;
 })
+
+yesButton.addEventListener('click', function() {
+  window.open('./accept-form.html')
+});
+
